@@ -1,0 +1,8 @@
+Use your image generation tool to create ONE image, square 1024x1024, with a TRUE transparent background (real alpha channel, not a painted checkerboard, not white), and save it as a PNG at exactly: OUTPATH
+Do not create any other files. When done, reply with the absolute path only.
+
+The first attached image is the room this sprite will be placed into; match its brush style, palette and midday lighting. Paint ONLY the subject below, whole and uncropped, centred with a margin, no floor, no cast shadow, no background, no other objects.
+
+SUBJECT: SUBJECT
+STYLE (applies to every asset in this project): painterly digital gouache illustration with visible, chunky, confident brush strokes; forms built from flat colour shapes with soft, slightly imperfect hand-painted edges; no outlines, no photorealism, no 3D-render look; subtle canvas grain. Limited warm palette: cream, sand, honey wood, terracotta, muted teal, sage green, dusty lavender, with small saturated accents. Mood: cozy, lived-in, a little messy, personal. In the spirit of stylised animation background paintings. No readable text, no lettering, no logos, no watermark, no signature, no UI chrome.
+The attached reference images are for mood and brushwork ONLY. Do not copy their compositions, objects or characters; paint an original scene.

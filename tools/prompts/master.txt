@@ -1,0 +1,17 @@
+Use your image generation tool to create ONE original illustration, landscape 3:2 (1536x1024), and save it as a PNG at exactly: OUTPATH
+Do not create any other files. When done, reply with the absolute path only.
+
+SUBJECT: an isometric cutaway of a cozy small studio room belonging to a young designer who also crochets, seen from above at a three-quarter angle (about 35 degrees), with the two back walls visible and the two front walls removed. Wooden plank floor. Everything outside the room cutaway is flat dark charcoal (#1c1c22). The whole room fits inside the frame with a little margin.
+
+The room has four clearly separated zones with open floor between them, so each can be recognised and clicked on its own:
+1. WORK DESK, the hero, against the back-right wall: a wooden desk with a desktop monitor whose screen faces the viewer and is a flat, dark, completely empty rectangle (a UI will be composited onto it later), keyboard, drawing tablet with stylus, adjustable desk lamp, a mug, sticky notes and sketches pinned on the wall above, an office chair pulled slightly aside.
+2. WINDOW, large, on the back-left wall, with a wide empty window sill (leave a clear empty spot where a cat will sit later), sheer curtains, pale sky visible, and a shaft of warm sunlight falling across the floor.
+3. YARN AND CRAFT TABLE, on the left side: a low table with baskets of yarn balls in warm colours, crochet hooks, a half-finished crochet piece, scissors, an embroidery hoop, a small sewing box, and a pegboard above with thread spools.
+4. BOOKSHELF, tall, on the right/front side: books, sketchbooks, binders, storage boxes, rolled papers, small plants and trinkets.
+Small touches: a record player with a vinyl on a low cabinet, a string of fairy lights along the wall (unlit, it is daytime), a floor lamp, a rug, potted plants, a floor cushion.
+No people and no animals anywhere (a cat is added separately later).
+
+LIGHT: clear midday. Warm sunlight through the window, soft cool shadows, all lamps off.
+
+STYLE (applies to every asset in this project): painterly digital gouache illustration with visible, chunky, confident brush strokes; forms built from flat colour shapes with soft, slightly imperfect hand-painted edges; no outlines, no photorealism, no 3D-render look; subtle canvas grain. Limited warm palette: cream, sand, honey wood, terracotta, muted teal, sage green, dusty lavender, with small saturated accents. Mood: cozy, lived-in, a little messy, personal. In the spirit of stylised animation background paintings. No readable text, no lettering, no logos, no watermark, no signature, no UI chrome.
+The attached reference images are for mood and brushwork ONLY. Do not copy their compositions, objects or characters; paint an original scene.

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Room assets preview</title>
+<style>
+  :root { --bg:#1c1c22; --ink:#f3ead9; --dim:#a79f93; --chip:#2b2b34; --on:#e9a15b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 ui-rounded, system-ui, sans-serif; }
+  main { max-width:1200px; margin:0 auto; padding:24px 16px 80px; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:16px; margin:40px 0 12px; }
+  p { color:var(--dim); margin:0 0 16px; }
+  .stage { position:relative; aspect-ratio:3/2; overflow:hidden; border-radius:12px; }
+  .stage img { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity 1.2s ease; }
+  .stage img.on { opacity:1; }
+  .stage img.cat { opacity:1; inset:auto; width:5%; height:auto; left:33%; top:27.5%; pointer-events:none; }
+  .bar { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+  button { background:var(--chip); color:var(--ink); border:0; border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
+  button.on { background:var(--on); color:#1c1c22; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  figure { margin:0; } figure img { width:100%; border-radius:10px; display:block; }
+  figcaption { color:var(--dim); font-size:13px; margin-top:6px; }
+  .sprites { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-end; background:#8ea0bd; border-radius:12px; padding:20px; }
+  .sprites img { height:140px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Room assets</h1>
+  <p>Switch the light to see how the same room reads through the day. The cat on the sill is a separate sprite.</p>
+  <div class="stage" id="stage"></div>
+  <div class="bar" id="bar"></div>
+
+  <h2>Zone close-ups</h2>
+  <div class="grid">
+    <figure><img src="assets/zones/desk.png" alt="Desk close-up"><figcaption>Desk: work (screen left empty for the UI)</figcaption></figure>
+    <figure><img src="assets/zones/craft.png" alt="Craft table close-up"><figcaption>Yarn and craft table: about me</figcaption></figure>
+    <figure><img src="assets/zones/bookshelf.png" alt="Bookshelf close-up"><figcaption>Bookshelf: ideas and documentation</figcaption></figure>
+    <figure><img src="assets/zones/window.png" alt="Window close-up"><figcaption>Window: where the visiting cat taps</figcaption></figure>
+  </div>
+
+  <h2>Sprites</h2>
+  <div class="sprites">
+    <img src="assets/sprites/cat-sit.png" alt="Cat sitting">
+    <img src="assets/sprites/cat-walk.png" alt="Cat walking">
+    <img src="assets/sprites/cat-leap.png" alt="Cat leaping">
+    <img src="assets/sprites/cat-sleep.png" alt="Cat sleeping">
+    <img src="assets/sprites/window-cat.png" alt="Window cat" style="height:220px">
+    <img src="assets/sprites/note-1.png" alt="" style="height:60px">
+    <img src="assets/sprites/note-3.png" alt="" style="height:60px">
+    <img src="assets/sprites/note-5.png" alt="" style="height:60px">
+  </div>
+</main>
+<script>
+  const looks = [["dawn","Dawn"],["day","Day"],["overcast","Overcast"],["sunset","Sunset"],["night-on","Night, lights on"],["night-off","Night, lights off"]];
+  const stage = document.getElementById("stage"), bar = document.getElementById("bar");
+  looks.forEach(([id,label]) => {
+    const img = new Image(); img.src = `assets/room/${id}.png`; img.alt = label; img.dataset.id = id; stage.append(img);
+    const b = document.createElement("button"); b.textContent = label; b.dataset.id = id; b.onclick = () => show(id); bar.append(b);
+  });
+  const cat = new Image(); cat.src = "assets/sprites/cat-sit.png"; cat.className = "cat"; cat.alt = ""; stage.append(cat);
+  function show(id) {
+    stage.querySelectorAll("img[data-id]").forEach(i => i.classList.toggle("on", i.dataset.id === id));
+    bar.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.id === id));
+  }
+  show("day");
+</script>
+</body>
+</html>
